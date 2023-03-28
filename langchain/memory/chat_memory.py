@@ -15,7 +15,6 @@ from langchain.schema import (
 
 class ChatMessageHistory(BaseChatMessageHistory):
     messages: List[BaseMessage] = []
-    session_id: str = "default"
 
     def add_user_message(self, message: str) -> None:
         self.messages.append(HumanMessage(content=message))
